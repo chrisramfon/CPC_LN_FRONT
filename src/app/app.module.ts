@@ -23,6 +23,7 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   imports: [
@@ -43,7 +44,10 @@ import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
     IniciosesionComponent,
 
   ],
-  providers: [],
+  providers: [
+    LoginService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,20 +4,12 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
 
 const routes: Routes =[
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
-    children: [{
-      path: '',
-      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-    }]
-  }
+  {path: 'inicio', component: IniciosesionComponent}, 
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
+  {path:'**', redirectTo:'inicio',pathMatch:'full'}
 ];
 
 @NgModule({

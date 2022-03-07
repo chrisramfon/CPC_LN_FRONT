@@ -3,38 +3,38 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-//import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
+import { TableListComponent } from './table-list/table-list.component';
+import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
+import { ListaclienteComponent } from './listacliente/listacliente.component';
+import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 
-const routes: Routes =[
-  {
-    path: '', redirectTo: '/iniciosesion', pathMatch: 'full',
-  }, 
-  { path: 'dashboard', component: DashboardComponent,
-    children: 
+const routes: Routes = [
+  {path: 'inicio', component: IniciosesionComponent}, 
+  {path: 'admin', component: AdminLayoutComponent,
+ children: 
   [
-    { path: 'user-profile', component: UserProfileComponent}
+    { path:'', pathMatch:'prefix', redirectTo:'agregarcliente'},
+    {path:'agregarcliente', component: AgregarclienteComponent},
+    {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
+    {path:'listacliente', component: ListaclienteComponent},
+    {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
+    {path:'editarcliente', component: EditarclienteComponent}
+
+   // {path: '', loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)}
+  
   ]
-  }];
-// VÍDEO PARA GUIARSE CON LAS CHILD ROUTES: https://m.youtube.com/watch?v=ZoeZxpfTCXk
+},
 
 
+{path: '', redirectTo: 'inicio', pathMatch: 'full'},
+{path:'**', redirectTo:'inicio',pathMatch:'full'} 
+  
+  ];
 
-/*const routes: Routes =[
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
-    children: [{
-      path: '',
-      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-    }]
-  }
-];*/
 
 
 @NgModule({
@@ -49,3 +49,4 @@ const routes: Routes =[
   ],
 })
 export class AppRoutingModule { }
+//export const routingComponents = [DashboardComponent, UserProfileComponent, TableListComponent]

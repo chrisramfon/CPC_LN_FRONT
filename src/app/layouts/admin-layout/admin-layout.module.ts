@@ -6,6 +6,9 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
+import { AgregarclienteComponent } from 'app/agregarcliente/agregarcliente.component';
+import { ListaclienteComponent } from 'app/listacliente/listacliente.component';
+import { EditarclienteComponent } from 'app/editarcliente/editarcliente.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
@@ -40,6 +43,9 @@ import {MatSelectModule} from '@angular/material/select';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    AgregarclienteComponent,
+    ListaclienteComponent,
+    EditarclienteComponent
   ]
 })
 

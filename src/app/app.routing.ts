@@ -22,10 +22,7 @@ const routes: Routes = [
     {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
     {path:'listacliente', component: ListaclienteComponent},
     {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
-    {path:'editarcliente', component: EditarclienteComponent}
-
-   // {path: '', loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)}
-  
+    {path:'editarcliente', component: EditarclienteComponent} 
   ]
 },
 
@@ -49,4 +46,3 @@ const routes: Routes = [
   ],
 })
 export class AppRoutingModule { }
-//export const routingComponents = [DashboardComponent, UserProfileComponent, TableListComponent]

@@ -11,6 +11,7 @@ import { TableListComponent } from './table-list/table-list.component';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
+import { ListaAdeudoComponent } from './lista-adeudo/lista-adeudo.component';
 
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path:'editarcliente', component: EditarclienteComponent} 
     ]
   },
+  {path: 'tabla', component: ListaAdeudoComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'} 
 ];

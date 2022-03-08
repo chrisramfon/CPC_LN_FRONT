@@ -30,7 +30,7 @@ import { LoginService } from './services/login.service';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
-
+import { ClienteService } from './services/cliente.service';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -47,12 +47,12 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    IniciosesionComponent
-    //AgregarclienteComponent,
+    IniciosesionComponent,
 
   ],
   providers: [
-    LoginService
+    LoginService,
+    ClienteService
 
   ],
   bootstrap: [AppComponent]

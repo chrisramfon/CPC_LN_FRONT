@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import {Router} from '@angular/router';
 import { LoginService } from 'app/services/login.service';
 
@@ -7,15 +7,11 @@ import { LoginService } from 'app/services/login.service';
   templateUrl: './iniciosesion.component.html',
   styleUrls: ['./iniciosesion.component.css']
 })
-export class IniciosesionComponent implements OnInit {
+export class IniciosesionComponent {
 
   Usuario = {correo: "", pass: ""}
 
   constructor(private router:Router, private Log: LoginService) { }
-
-  ngOnInit(): void {
-   
-  }
 
   login(){
     this.Log.reqLogin(this.Usuario).subscribe(
@@ -25,7 +21,7 @@ export class IniciosesionComponent implements OnInit {
       }, 
       err=>{
         console.log(err)
-        alert("Error al inicial sesion")
+        alert("Usuario o contraseña incorrectos")
       })
   }
   navegaraDashboard(){

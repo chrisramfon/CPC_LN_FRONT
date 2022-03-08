@@ -23,10 +23,10 @@ const routes: Routes = [
       {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
       {path:'listacliente', component: ListaclienteComponent},
       {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
-      {path:'editarcliente', component: EditarclienteComponent} 
+      {path:'editarcliente', component: EditarclienteComponent},
+      {path: 'ListaAdeudos', component: ListaAdeudoComponent} 
     ]
   },
-  {path: 'tabla', component: ListaAdeudoComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path:'**', redirectTo:'inicio',pathMatch:'full'} 
 ];

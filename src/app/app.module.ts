@@ -18,12 +18,18 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
+
+
+
 import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
 import { LoginService } from './services/login.service';
+import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
+import { ListaclienteComponent } from './listacliente/listacliente.component';
+import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 
 @NgModule({
   imports: [
@@ -41,7 +47,8 @@ import { LoginService } from './services/login.service';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    IniciosesionComponent,
+    IniciosesionComponent
+    //AgregarclienteComponent,
 
   ],
   providers: [

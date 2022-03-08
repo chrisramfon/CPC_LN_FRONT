@@ -28,5 +28,7 @@ export class IniciosesionComponent implements OnInit {
         alert("Error al inicial sesion")
       })
   }
-
+  navegaraDashboard(){
+    this.router.navigate(['/admin'])
+  }
 }

@@ -26,6 +26,7 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
+import { LoginService } from './services/login.service';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
@@ -50,7 +51,10 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
     //AgregarclienteComponent,
 
   ],
-  providers: [],
+  providers: [
+    LoginService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

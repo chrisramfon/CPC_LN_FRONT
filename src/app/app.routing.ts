@@ -15,24 +15,19 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
   {path: 'admin', component: AdminLayoutComponent,
- children: 
-  [
-    { path:'', pathMatch:'prefix', redirectTo:'agregarcliente'},
-    {path:'agregarcliente', component: AgregarclienteComponent},
-    {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
-    {path:'listacliente', component: ListaclienteComponent},
-    {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
-    {path:'editarcliente', component: EditarclienteComponent} 
-  ]
-},
-
-
-{path: '', redirectTo: 'inicio', pathMatch: 'full'},
-{path:'**', redirectTo:'inicio',pathMatch:'full'} 
-  
-  ];
-
-
+  children: 
+    [
+      { path:'', pathMatch:'prefix', redirectTo:'agregarcliente'},
+      {path:'agregarcliente', component: AgregarclienteComponent},
+      {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
+      {path:'listacliente', component: ListaclienteComponent},
+      {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
+      {path:'editarcliente', component: EditarclienteComponent} 
+    ]
+  },
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
+  {path:'**', redirectTo:'inicio',pathMatch:'full'} 
+];
 
 @NgModule({
   imports: [
@@ -45,4 +40,5 @@ const routes: Routes = [
   exports: [
   ],
 })
+
 export class AppRoutingModule { }

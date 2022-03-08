@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { LoginService } from 'app/services/login.service';
 
 @Component({
@@ -17,14 +17,12 @@ export class IniciosesionComponent {
     this.Log.reqLogin(this.Usuario).subscribe(
       res=>{
         const result = res
-        console.log(result);
+        console.log(result)
+        this.router.navigateByUrl('/admin')
       }, 
       err=>{
         console.log(err)
         alert("Usuario o contraseña incorrectos")
       })
-  }
-  navegaraDashboard(){
-    this.router.navigate(['/admin'])
   }
 }

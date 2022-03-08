@@ -1,2 +1,58 @@
-<p>listacliente works!</p>
-<router-outlet></router-outlet>
+<div class="main-content">
+    <div class="container-fluid">
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title ">Simple Table</h4>
+                            <p class="card-category"> Here is a subtitle for this table</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <th>
+                                            City
+                                        </th>
+                                        <th>
+                                            Salary
+                                        </th>
+                                    </thead>
+                                    <tbody *ngFor="let ct of List.results">
+                                        <tr >
+                                            <td>
+                                                {{ct.id}}
+                                            </td>
+                                            <td>
+                                                {{ct.name}}
+                                            </td>
+                                            <td>
+                                                {{ct.status}}
+                                            </td>
+                                            <td>
+                                                {{ct.species}}
+                                            </td>
+                                            <td class="text-primary">
+                                                {{ct.type}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

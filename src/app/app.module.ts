@@ -32,6 +32,7 @@ import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { ListaAdeudoComponent } from './lista-adeudo/lista-adeudo.component';
 import { AdeudoService } from './services/adeudo.service';
+import { ClienteService } from './services/cliente.service';
 
 @NgModule({
   imports: [
@@ -51,9 +52,11 @@ import { AdeudoService } from './services/adeudo.service';
     AdminLayoutComponent,
     IniciosesionComponent,
     ListaAdeudoComponent
+
   ],
   providers: [
     LoginService,
+    ClienteService,
     AdeudoService
 
   ],

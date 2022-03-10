@@ -7,6 +7,8 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { AgregarclienteComponent } from 'app/agregarcliente/agregarcliente.component';
+import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.component';
+import { ModificarAdeudoComponent } from 'app/modificar-adeudo/modificar-adeudo.component';
 import { ListaclienteComponent } from 'app/listacliente/listacliente.component';
 import { EditarclienteComponent } from 'app/editarcliente/editarcliente.component';
 import { TypographyComponent } from '../../typography/typography.component';
@@ -20,6 +22,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { ListaAdeudoComponent } from 'app/lista-adeudo/lista-adeudo.component';
+import { VerAdeudoComponent } from 'app/ver-adeudo/ver-adeudo.component';
 
 @NgModule({
   imports: [
@@ -45,7 +49,11 @@ import {MatSelectModule} from '@angular/material/select';
     UpgradeComponent,
     AgregarclienteComponent,
     ListaclienteComponent,
-    EditarclienteComponent
+    EditarclienteComponent,
+    RegistrarAdeudoComponent,
+    ModificarAdeudoComponent,
+    ListaAdeudoComponent,
+    VerAdeudoComponent
   ]
 })
 

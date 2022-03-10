@@ -30,7 +30,7 @@ import { LoginService } from './services/login.service';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
-import { ListaAdeudoComponent } from './lista-adeudo/lista-adeudo.component';
+
 import { AdeudoService } from './services/adeudo.service';
 import { ClienteService } from './services/cliente.service';
 
@@ -50,8 +50,7 @@ import { ClienteService } from './services/cliente.service';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    IniciosesionComponent,
-    ListaAdeudoComponent
+    IniciosesionComponent
 
   ],
   providers: [

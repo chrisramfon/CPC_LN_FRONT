@@ -1,0 +1,60 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Registrar adeudo</h4>
+            <p class="card-category">Ingresa la información del adeudo</p>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="RFC" [(ngModel)]  = "adeudo.RFC">
+                </mat-form-field>
+              </div>
+              <div class="col-md-5">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Adeudo" [(ngModel)]  = "adeudo.adeudo">
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Pagado" type="number" [(ngModel)]  = "adeudo.pagado">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Fecha de la factura" type="date" [(ngModel)]  = "adeudo.fecha_factura">
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Fecha limite de pago" type="date" [(ngModel)]  = "adeudo.fecha_limite">
+                </mat-form-field>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Total" type="number" [(ngModel)]  = "adeudo.total">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label>Notas</label>
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Ingresa datos adicionales sobre el adeudo" [(ngModel)]  = "adeudo.notas"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <button class="btn btn-danger pull-right" (click)="setAdeudo()">Guardar</button>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

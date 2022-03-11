@@ -20,7 +20,9 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
-
+import { EditarcuentabancariaComponent } from 'app/editarcuentabancaria/editarcuentabancaria.component';
+import { ListacuentabancariaComponent } from 'app/listacuentabancaria/listacuentabancaria.component';
+import { VercuentabancariaComponent } from 'app/vercuentabancaria/vercuentabancaria.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -45,7 +47,10 @@ import {MatSelectModule} from '@angular/material/select';
     UpgradeComponent,
     AgregarclienteComponent,
     ListaclienteComponent,
-    EditarclienteComponent
+    EditarclienteComponent,
+    EditarcuentabancariaComponent,
+    ListacuentabancariaComponent,
+    VercuentabancariaComponent
   ]
 })
 

@@ -47,7 +47,7 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    IniciosesionComponent
+    IniciosesionComponent,
     //AgregarclienteComponent,
 
   ],

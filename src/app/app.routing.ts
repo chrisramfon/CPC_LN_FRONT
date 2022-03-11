@@ -22,7 +22,8 @@ const routes: Routes = [
       {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
       {path:'listacliente', component: ListaclienteComponent},
       {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
-      {path:'editarcliente', component: EditarclienteComponent} 
+      //{path:'editarcliente', component: EditarclienteComponent},
+      {path:'editarcliente/:id', component: EditarclienteComponent} 
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

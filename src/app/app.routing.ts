@@ -11,6 +11,7 @@ import { TableListComponent } from './table-list/table-list.component';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
+import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
 
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
@@ -23,7 +24,9 @@ const routes: Routes = [
       {path:'listacliente', component: ListaclienteComponent},
       {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
       //{path:'editarcliente', component: EditarclienteComponent},
-      {path:'editarcliente/:id', component: EditarclienteComponent} 
+      {path:'editarcliente/:id', component: EditarclienteComponent},
+      {path:'', pathMatch:'prefix', redirectTo:'verinfocliente'},
+      {path:'verinfocliente/:id', component: VerinfoclienteComponent},
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

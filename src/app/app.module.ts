@@ -31,6 +31,7 @@ import { AgregarclienteComponent } from './agregarcliente/agregarcliente.compone
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { ClienteService } from './services/cliente.service';
+import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,

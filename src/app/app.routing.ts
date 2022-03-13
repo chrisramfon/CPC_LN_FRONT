@@ -15,6 +15,7 @@ import { ListaAdeudoComponent } from './lista-adeudo/lista-adeudo.component';
 import { RegistrarAdeudoComponent } from './registrar-adeudo/registrar-adeudo.component';
 import { ModificarAdeudoComponent } from './modificar-adeudo/modificar-adeudo.component';
 import { VerAdeudoComponent } from './ver-adeudo/ver-adeudo.component';
+import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
 
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
@@ -30,7 +31,10 @@ const routes: Routes = [
       {path: 'ListaAdeudos', component: ListaAdeudoComponent},
       {path: 'RegistrarAdeudo', component: RegistrarAdeudoComponent},
       {path: 'ModificarA/:id', component: ModificarAdeudoComponent},
-      {path: 'VerA/:id', component: VerAdeudoComponent} 
+      {path: 'VerA/:id', component: VerAdeudoComponent}, 
+      {path:'editarcliente/:id', component: EditarclienteComponent},
+      {path:'', pathMatch:'prefix', redirectTo:'verinfocliente'},
+      {path:'verinfocliente/:id', component: VerinfoclienteComponent}
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

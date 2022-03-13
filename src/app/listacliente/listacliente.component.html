@@ -2,48 +2,41 @@
     <div class="container-fluid">
         <div>
             <div class="row">
+                <div class="input-field col s12">
+                    <button type="button" class="btn btn-danger" (click)="iraRegistrarcliente();">Registrar nuevo cliente</button>
+                </div>     
+                </div>   
+                <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-danger">
-                            <h4 class="card-title ">Simple Table</h4>
+                            <h4 class="card-title ">Lista de Clientes</h4>
                             <p class="card-category"> Here is a subtitle for this table</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead class=" text-primary">
-                                        <th>
-                                            ID
-                                        </th>
-                                        <th>
-                                            Name
-                                        </th>
-                                        <th>
-                                            Country
-                                        </th>
-                                        <th>
-                                            City
-                                        </th>
-                                        <th>
-                                            Salary
-                                        </th>
+                                        <th>Nombre</th>
+                                        <th>RFC</th>
+                                        <th>Correo</th>
+                                        <th>Teléfono</th>
+                                        <th>Dirección</th>
                                     </thead>
-                                    <tbody *ngFor="let ct of List.results">
-                                        <tr >
+                                    <tbody >
+                                        <tr *ngFor="let ct of List">
+                                            <td>{{ct.nombre}}</td>
+                                            <td>{{ct.rfc}}</td>
+                                            <td>{{ct.correo}}</td>
+                                            <td>{{ct.telefono}}</td>
+                                            <td>{{ct.direccion}}</td>
                                             <td>
-                                                {{ct.id}}
-                                            </td>
-                                            <td>
-                                                {{ct.name}}
-                                            </td>
-                                            <td>
-                                                {{ct.status}}
-                                            </td>
-                                            <td>
-                                                {{ct.species}}
-                                            </td>
-                                            <td class="text-primary">
-                                                {{ct.type}}
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4">
+                                                        <button class="btn btn-danger" type="button" class="btn btn-danger" routerLink="../verinfocliente/{{ct._id}}">Ver</button>
+                                                        <a type="button" class="btn btn-danger" routerLink="../editarcliente/{{ct._id}}">Modificar</a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>

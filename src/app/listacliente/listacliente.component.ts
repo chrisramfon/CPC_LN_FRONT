@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ClienteService} from 'app/services/cliente.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-listacliente',
   templateUrl: './listacliente.component.html',
@@ -7,23 +8,26 @@ import {ClienteService} from 'app/services/cliente.service';
 })
 export class ListaclienteComponent implements OnInit {
 
-  constructor(private ListaCliente: ClienteService) { }
+  constructor(private ListaCliente: ClienteService, private router:Router, private ServicioCliente: ClienteService) { }
 
   List
-
+  
   ngOnInit(): void {
-    this.getListaCliente()
+    this.getCliente()
   }
-  getListaCliente(){
-    this.List = this.ListaCliente.ListaCliente().subscribe(
-      res=>{
-        this.List = res;
-      
-      }, 
-      err =>{
-        alert("error al tener lista")
-
+  getCliente(){
+    this.ServicioCliente.getCliente().subscribe(
+      res => {
+        this.List = res
+        console.log(this.List)
+      }, err => {
+        console.log(err)
       })
+    }
+
+
+  iraRegistrarcliente = function(){
+    this.router.navigate(['admin/agregarcliente']);
   }
 
 }

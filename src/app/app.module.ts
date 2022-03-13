@@ -33,6 +33,7 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
 
 import { AdeudoService } from './services/adeudo.service';
 import { ClienteService } from './services/cliente.service';
+import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
 
 @NgModule({
   imports: [

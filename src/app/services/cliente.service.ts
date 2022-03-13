@@ -7,14 +7,25 @@ import { EditarclienteComponent } from 'app/editarcliente/editarcliente.componen
 })
 export class ClienteService {
 
-private consultaURL = "https://rickandmortyapi.com/api/character"
+private consultaCLIENTEURL = "http://127.0.0.1:3000/cliente"
+private verCLIENTEURL = "http://127.0.0.1:3000/cliente/Buscar"
+private editarCLIENTEURL = "http://127.0.0.1:3000/cliente/Modificar"
+
+private consultaADEUDOURL = "http://127.0.0.1:3000/cliente/GuardarFactura"
 
   constructor(private http: HttpClient) { }
-  ListaCliente(){
-    return this.http.get<any>(this.consultaURL)
+  getCliente(){
+    return this.http.get<any>(this.consultaCLIENTEURL)
   }
-  EditarCliente(cliente:EditarclienteComponent){
-    //return this.http.put(this.consultaURL);
+  EditarCliente(EdiID){
+    return this.http.put<any>(this.editarCLIENTEURL,EdiID)
+  }
+  getverCliente(CliID){
+    return this.http.post<any>(this.verCLIENTEURL,CliID)
+  }
+
+  getverAdeudos(AdeudosID){
+    return this.http.post<any>(this.consultaADEUDOURL, AdeudosID)
   }
 
 }

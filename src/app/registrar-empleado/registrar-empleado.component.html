@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Registrar empleado</h4>
+              <p class="card-category">Ingresa la información del empleado y sus credenciales de acceso. *Datos requeridos</p>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nombre" type="text" [(ngModel)]  = "ESend.nombre" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Apellido paterno" type="text" [(ngModel)]  = "ESend.apellidoP" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Apellido materno" type="text" [(ngModel)]  = "ESend.apellidoM">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Télefono" type="text" [(ngModel)]  = "ESend.telefono">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Correo" type="text" [(ngModel)]  = "ESend.correo" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Contraseña" type="password" [(ngModel)]  = "ESend.pass" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button class="btn btn-danger pull-right" (click)="postEmpleado()" >Guardar</button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

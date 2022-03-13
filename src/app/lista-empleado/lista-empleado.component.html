@@ -1,0 +1,63 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">
+                <button class="btn btn-danger" type="button" routerLink = "../RegistrarEmpleado">Registrar</button>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Empleados</h4>
+                        <p class="card-category">Empleados registrados</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Apellido paterno
+                                    </th>
+                                    <th>
+                                        Télefono
+                                    </th>
+                                    <th>
+                                        Correo electrónico
+                                    </th>
+                                </thead>
+                                <tbody >
+                                    <tr *ngFor = "let Emp of List">
+                                        <td>
+                                            {{Emp.nombre}}
+                                        </td>
+                                        <td>
+                                            {{Emp.apellidoP}}
+                                        </td>
+                                        <td>
+                                            {{Emp.telefono}}
+                                        </td>
+                                        <td>
+                                            {{Emp.correo}}
+                                        </td>
+                                        <td>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-4">
+                                                    <a class="btn btn-danger" type="button" routerLink = "../VerEmpleado/{{Emp._id}}">Ver</a>
+                                                    <a type="button" class="btn btn-danger" routerLink = "../ModificarEmpleado/{{Emp._id}}">Modificar</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

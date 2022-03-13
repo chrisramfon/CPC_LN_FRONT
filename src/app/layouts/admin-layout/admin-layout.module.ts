@@ -20,6 +20,10 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { ListaEmpleadoComponent } from 'app/lista-empleado/lista-empleado.component';
+import { ModificarEmpleadoComponent } from 'app/modificar-empleado/modificar-empleado.component';
+import { VerEmpleadoComponent } from 'app/ver-empleado/ver-empleado.component';
+import { RegistrarEmpleadoComponent } from 'app/registrar-empleado/registrar-empleado.component';
 
 @NgModule({
   imports: [
@@ -45,7 +49,11 @@ import {MatSelectModule} from '@angular/material/select';
     UpgradeComponent,
     AgregarclienteComponent,
     ListaclienteComponent,
-    EditarclienteComponent
+    EditarclienteComponent,
+    ListaEmpleadoComponent,
+    ModificarEmpleadoComponent,
+    VerEmpleadoComponent,
+    RegistrarEmpleadoComponent
   ]
 })
 

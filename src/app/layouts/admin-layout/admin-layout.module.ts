@@ -22,6 +22,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { VerinfoclienteComponent } from 'app/verinfocliente/verinfocliente.component';
 import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.component';
+import { RegistrarBancoComponent } from 'app/registrar-banco/registrar-banco.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.
     ListaclienteComponent,
     EditarclienteComponent,
     VerinfoclienteComponent,
-    RegistrarAdeudoComponent
+    RegistrarAdeudoComponent,
+    RegistrarBancoComponent
   ]
 })
 

@@ -49,7 +49,7 @@ import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.compone
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    IniciosesionComponent,
+    IniciosesionComponent
 
   ],
   providers: [

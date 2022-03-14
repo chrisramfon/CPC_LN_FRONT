@@ -20,6 +20,11 @@ export class VerinfoclienteComponent implements OnInit {
   }
 
  
+  Cuenta = [{cuenta: "", banco: "", estado_b: ""}]
+
+  
+
+  Clientec = { _id:"",nombre:"", rfc:"", telefono:"", correo:"", direccion:"", __v:"", informacion_bancaria: [this.Cuenta] }
 
   ngOnInit(): void {
     this.getCliente()
@@ -33,6 +38,8 @@ export class VerinfoclienteComponent implements OnInit {
     this.Cliente = res;
     console.log(this.Cliente.factura)
       
+    this.Cliente = res; 
+    console.log(this.Cuenta)
     }, err => {console.log(err)
     console.log(err)
     alert("Cliente no encontrado")

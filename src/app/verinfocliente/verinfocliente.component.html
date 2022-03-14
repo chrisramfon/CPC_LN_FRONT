@@ -1,69 +1,13 @@
 <div class="main-content">
   <div class="container-fluid">
-    <div>
-      <div class="row">
-        <div class="col-md-8">
-          <button mat-raised-button type="button" class="btn btn-danger pull-left"
-          (click)="volveraListadeCliente();"> VOLVER A LA LISTA </button>
-          <a mat-raised-button type="button" class="btn btn-danger pull-left" routerLink="../../registraradeudo/{{Cliente._id}}"
-        > REGISTRAR ADEUDO </a>
-        <div class="clearfix"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-danger">
-              <h4 class="card-title">Información del cliente</h4>
-              <p class="card-category">Estos son la Información del cliente </p>
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Nombre(s)" type="text" [(ngModel)]="Cliente.nombre" disabled>
-                  </mat-form-field>
-                </div>
-                <div class="col-md-6">
-
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Registro Federal de Contribuyentes (RFC)" type="text"
-                      [(ngModel)]="Cliente.rfc" disabled>
-                  </mat-form-field>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Correo Electrónico" type="text" [(ngModel)]="Cliente.correo" disabled>
-                  </mat-form-field>
-                </div>
-                <div class="col-md-6">
-
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Teléfono" type="text" [(ngModel)]="Cliente.telefono" disabled>
-                  </mat-form-field>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Dirección" type="text" [(ngModel)]="Cliente.direccion" disabled>
-                  </mat-form-field>
-                </div>
-              </div>
-
-    <div class="row">
+    <div class="row"><!--Inicio del row de los botones-->
       <div class="col-md-8">
-        <button mat-raised-button type="button" class="btn btn-danger pull-left" (click)="volveraListadeCliente();">
-          Volver a la lista </button>
-          <a mat-raised-button type="button" class="btn btn-danger pull-left" routerLink = "../../RegistrarBanco/{{Cliente._id}}">
-            Registrar cuenta </a>
+        <button mat-raised-button type="button" class="btn btn-danger pull-left" (click)="volveraListadeCliente();">Volver a la lista </button>
+        <a mat-raised-button type="button" class="btn btn-danger pull-left" routerLink="../../registraradeudo/{{Cliente._id}}"> REGISTRAR ADEUDO </a>
+        <a mat-raised-button type="button" class="btn btn-danger pull-left" routerLink="../../RegistrarBanco/{{Cliente._id}}">Registrar cuenta </a>
       </div>
-    </div>
-    <div class="row">
+    </div><!--Fin del row de los botones-->
+    <div class="row"><!--Inicio del fomulario disabled-->
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-danger">
@@ -71,7 +15,7 @@
             <p class="card-category">Estos son la Información del cliente </p>
           </div>
           <div class="card-body">
-            <div class="row">
+            <div class="row"><!--Primer renglon del formulario-->
               <div class="col-md-6">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Nombre(s)" type="text" [(ngModel)]="Cliente.nombre" disabled>
@@ -83,8 +27,8 @@
                     [(ngModel)]="Cliente.rfc" disabled>
                 </mat-form-field>
               </div>
-            </div>
-            <div class="row">
+            </div><!--Fin del primer renglon del formulario-->
+            <div class="row"><!--Segundo renglon del formulario-->
               <div class="col-md-6">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Correo Electrónico" type="text" [(ngModel)]="Cliente.correo" disabled>
@@ -95,50 +39,54 @@
                   <input matInput placeholder="Teléfono" type="text" [(ngModel)]="Cliente.telefono" disabled>
                 </mat-form-field>
               </div>
-            </div>
-            <div class="row">
+            </div><!--Fin del segundo renglon del formulario-->
+            <div class="row"><!--Tercer renglon del formulario-->
               <div class="col-md-12">
                 <mat-form-field class="example-full-width">
                   <input matInput placeholder="Dirección" type="text" [(ngModel)]="Cliente.direccion" disabled>
                 </mat-form-field>
               </div>
-            </div>
+            </div><!--Fin del tercer renglon del formulario-->
             <div class="clearfix"></div>
+          </div>
+        </div><!--Fin del card-->
+      </div>
+    </div><!--Fin del fomulario disabled-->
+    <div class="row"><!--Inicio de la tabla de adeudos-->
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Lista de Adeudos</h4>
+            <p class="card-category"> Visualización de los adeudos del cliente</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>Adeudo</th>
+                  <th>Pagado</th>
+                  <th>Total</th>
+                  <th>Fecha Factura</th>
+                  <th>Fecha Limite</th>
+                  <th>Notas</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ct of Cliente.factura">
+                    <td>{{ct.adeudo}} </td>
+                    <td>{{ct.pagado}}</td>
+                    <td>{{ct.total}}</td>
+                    <td>{{ct.fecha_factura}}</td>
+                    <td>{{ct.fecha_limite}}</td>
+                    <td>{{ct.notas}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-danger">
-              <h4 class="card-title ">Lista de Adeudos</h4>
-              <p class="card-category"> Visualización de los adeudos del cliente</p>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
-                    <th>Adeudo</th>
-                    <th>Pagado</th>
-                    <th>Total</th>
-                    <th>Fecha Factura</th>
-                    <th>Fecha Limite</th>
-                    <th>Notas</th>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let ct of Cliente.factura">
-                      <td>{{ct.adeudo}} </td>
-                      <td>{{ct.pagado}}</td>
-                      <td>{{ct.total}}</td>
-                      <td>{{ct.fecha_factura}}</td>
-                      <td>{{ct.fecha_limite}}</td>
-                      <td>{{ct.notas}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-    </div>
-    <div class="row">
+    </div><!--Fin de la tabla de adeudos-->
+    <div class="row"><!--Inicio de la tabla de cuentas bancarias-->
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-danger">
@@ -153,7 +101,7 @@
                   <th>Banco</th>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let c of Clientec.informacion_bancaria">
+                  <tr *ngFor="let c of Cliente.informacion_bancaria">
                     <td>{{c.cuenta}}</td>
                     <td>{{c.banco}}</td>
                   </tr>
@@ -163,22 +111,6 @@
           </div>
         </div>
       </div>
-
-    </div>
+    </div><!--Fin de la tabla de cuentas bancarias-->
   </div>
 </div>
-
-<!--  LISTA DE ADEUDOS  -->
-
-
-<router-outlet></router-outlet>
-
-<router-outlet></router-outlet>
-
-
-
-
-
-
-
-

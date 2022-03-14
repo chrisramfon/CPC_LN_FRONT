@@ -12,7 +12,7 @@ import { AgregarclienteComponent } from './agregarcliente/agregarcliente.compone
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
-
+import { RegistrarAdeudoComponent } from './registrar-adeudo/registrar-adeudo.component';
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
   {path: 'admin', component: AdminLayoutComponent,
@@ -26,6 +26,7 @@ const routes: Routes = [
       {path:'editarcliente/:id', component: EditarclienteComponent},
       {path:'', pathMatch:'prefix', redirectTo:'verinfocliente'},
       {path:'verinfocliente/:id', component: VerinfoclienteComponent},
+      {path:'registraradeudo/:id', component: RegistrarAdeudoComponent}
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

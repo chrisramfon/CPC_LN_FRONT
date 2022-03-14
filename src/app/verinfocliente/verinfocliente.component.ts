@@ -11,13 +11,15 @@ export class VerinfoclienteComponent implements OnInit {
 
   constructor(private router:Router, private route:ActivatedRoute, private ClienteServicio:ClienteService) {  }
 
+
+  factura = [{
+    folio:"", adeudo:"", pagado:"", total:"", fecha_factura:"", fecha_limite:"", notas:"",
+}]
   Cliente = { 
-     _id:"",nombre:"", rfc:"", telefono:"", correo:"", direccion:"", __v:"",
+     _id:"",nombre:"", rfc:"", telefono:"", correo:"", direccion:"", __v:"", factura:[this.factura]
   }
 
- factura = {
-      folio:"", adeudo:"", pagado:"", total:"", fecha_factura:"", fecha_limite:"", notas:"",
-  }
+ 
 
   ngOnInit(): void {
     this.getCliente()
@@ -29,6 +31,7 @@ export class VerinfoclienteComponent implements OnInit {
     this.Cliente._id = this.route.snapshot.paramMap.get('id')
     this.ClienteServicio.getverCliente(this.Cliente).subscribe(res=>{
     this.Cliente = res;
+    console.log(this.Cliente.factura)
       
     }, err => {console.log(err)
     console.log(err)
@@ -37,16 +40,5 @@ export class VerinfoclienteComponent implements OnInit {
     
     )
   }
-getAdeudo(){
-  this.factura.folio = this.route.snapshot.paramMap.get('folio')
-  this.ClienteServicio.getverAdeudos(this.factura).subscribe(
-    res=>{
-    this.factura = res;
-    console.log(this.factura)
-  }, err => {console.log(err)
-  console.log(err)
-  alert("Adeudo no encontrado")
-  })
-}
 
 }

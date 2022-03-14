@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { VerinfoclienteComponent } from 'app/verinfocliente/verinfocliente.component';
+import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,8 @@ import { VerinfoclienteComponent } from 'app/verinfocliente/verinfocliente.compo
     AgregarclienteComponent,
     ListaclienteComponent,
     EditarclienteComponent,
-    VerinfoclienteComponent
+    VerinfoclienteComponent,
+    RegistrarAdeudoComponent
   ]
 })
 

@@ -10,8 +10,7 @@ export class ClienteService {
 private consultaCLIENTEURL = "http://127.0.0.1:3000/cliente"
 private verCLIENTEURL = "http://127.0.0.1:3000/cliente/Buscar"
 private editarCLIENTEURL = "http://127.0.0.1:3000/cliente/Modificar"
-
-private consultaADEUDOURL = "http://127.0.0.1:3000/cliente/GuardarFactura"
+private postaDEUDOURL = "http://127.0.0.1:3000/cliente/factura"
 
   constructor(private http: HttpClient) { }
   getCliente(){
@@ -24,8 +23,8 @@ private consultaADEUDOURL = "http://127.0.0.1:3000/cliente/GuardarFactura"
     return this.http.post<any>(this.verCLIENTEURL,CliID)
   }
 
-  getverAdeudos(AdeudosID){
-    return this.http.post<any>(this.consultaADEUDOURL, AdeudosID)
+  postAdeudos(AdeudosID){
+    return this.http.post<any>(this.postaDEUDOURL, AdeudosID)
   }
 
 }

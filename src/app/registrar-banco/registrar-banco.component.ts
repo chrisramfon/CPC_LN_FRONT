@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'app/services/cliente.service';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-banco',
@@ -11,11 +11,13 @@ export class RegistrarBancoComponent implements OnInit {
 
 Cuenta = {cuenta: "", banco: "", _id: ""}
 
-  constructor(private Cliente: ClienteService, private Aroute: ActivatedRoute) { }
+  constructor(private Cliente: ClienteService, private Aroute: ActivatedRoute, private route:Router) { }
 
   ngOnInit(): void {
   }
-
+  volveraListadeCliente(){
+    this.route.navigate(['admin/listacliente'])
+  }
   postCuenta(){
     if(this.Cuenta.cuenta == ""){
       alert("Faltan datos requeridos.")
@@ -39,5 +41,6 @@ Cuenta = {cuenta: "", banco: "", _id: ""}
   limpiar(){
     this.Cuenta = {cuenta: "", banco: "", _id: ""}
   }
+
 
 }

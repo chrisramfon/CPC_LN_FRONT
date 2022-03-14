@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'app/services/cliente.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-adeudo',
@@ -13,10 +13,15 @@ Adeudo = {
   folio:"", adeudo:"", pagado:"", total:"", fecha_factura:"", fecha_limite:"", notas:"", _id:""
 }
 
-  constructor(private Aroute:ActivatedRoute,private ClienteServicio:ClienteService) { }
+  constructor(private Aroute:ActivatedRoute,private ClienteServicio:ClienteService, private route:Router) { }
 
   ngOnInit(): void {
   }
+  volveraListadeCliente(){
+    this.route.navigate(['admin/listacliente'])
+  }
+
+  
 postadeudo(){
 if (this.Adeudo.adeudo=="" || this.Adeudo.fecha_factura=="" || this.Adeudo.fecha_limite=="" || this.Adeudo.total==""|| this.Adeudo.folio==""){
   alert("Faltan datos requeridos.")

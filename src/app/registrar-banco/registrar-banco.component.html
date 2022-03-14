@@ -4,28 +4,35 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+
                         <div class="card-header card-header-danger">
                             <h4 class="card-title">Registrar cuenta</h4>
                             <p class="card-category">Introduce los datos de la cuenta. Datos requeridos*</p>
                         </div>
+
                         <div class="card-body">
                             <div class="row">
+
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Cuenta" type="text" required [(ngModel)]="Cuenta.cuenta">
                                     </mat-form-field>
                                 </div>
-                                <div class="col-md-6">
+
                                     <div class="col-md-6">
                                         <mat-form-field class="example-full-width">
                                             <input matInput placeholder="Banco" type="text" [(ngModel)]="Cuenta.banco">
                                         </mat-form-field>
                                     </div>
+
                                 </div>
+                            
                                 <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click) = "postCuenta()">guardar</button>
-                                <button mat-raised-button type="button" class="btn btn-danger pull-left" routerLink = "../listacliente"> VOLVER A LA
+                                <button mat-raised-button type="button" class="btn btn-danger pull-left" (click)="volveraListadeCliente()"> VOLVER A LA
                                     LISTA </button>
                                 <div class="clearfix"></div>
+
+                            
                             </div>
                         </div>
                     </div>

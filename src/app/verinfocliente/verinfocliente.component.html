@@ -23,7 +23,7 @@
               </div>
               <div class="col-md-6">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Registro Federal de Contribuyentes (RFC)" type="text"
+                  <input matInput placeholder="RFC" type="text"
                     [(ngModel)]="Cliente.rfc" disabled>
                 </mat-form-field>
               </div>
@@ -31,12 +31,12 @@
             <div class="row"><!--Segundo renglon del formulario-->
               <div class="col-md-6">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Correo Electrónico" type="text" [(ngModel)]="Cliente.correo" disabled>
+                  <input matInput placeholder="Correo Electrónico" type="mail" [(ngModel)]="Cliente.correo" disabled>
                 </mat-form-field>
               </div>
               <div class="col-md-6">
                 <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Teléfono" type="text" [(ngModel)]="Cliente.telefono" disabled>
+                  <input matInput placeholder="Teléfono" type="number" [(ngModel)]="Cliente.telefono" disabled>
                 </mat-form-field>
               </div>
             </div><!--Fin del segundo renglon del formulario-->

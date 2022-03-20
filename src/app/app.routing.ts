@@ -14,22 +14,21 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
 import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
 import { RegistrarAdeudoComponent } from './registrar-adeudo/registrar-adeudo.component';
 import { RegistrarBancoComponent } from './registrar-banco/registrar-banco.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
   {path: 'admin', component: AdminLayoutComponent,
   children: 
     [
-      { path:'', pathMatch:'prefix', redirectTo:'agregarcliente'},
+      { path:'', pathMatch:'full', redirectTo:'inicio'},
       {path:'agregarcliente', component: AgregarclienteComponent},
-      {path:'', pathMatch:'prefix', redirectTo:'listacliente'},
       {path:'listacliente', component: ListaclienteComponent},
-      {path:'', pathMatch:'prefix', redirectTo:'editarcliente'},
       {path:'editarcliente/:id', component: EditarclienteComponent},
-      {path:'', pathMatch:'prefix', redirectTo:'verinfocliente'},
       {path:'verinfocliente/:id', component: VerinfoclienteComponent},
       {path:'registraradeudo/:id', component: RegistrarAdeudoComponent},
-      {path: 'RegistrarBanco/:id', component: RegistrarBancoComponent}
+      {path: 'RegistrarBanco/:id', component: RegistrarBancoComponent},
+      {path: 'inicio', component: InicioComponent}
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

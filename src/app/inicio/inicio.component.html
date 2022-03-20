@@ -1,0 +1,98 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row"><!-- Inicio del row de las cuatro cards -->
+            <div class="col-lg-3 col-md-6 col-sm-6"><!-- Card de clientes registrados -->
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">people</i>
+                        </div>
+                        <p class="card-category">Clientes</p>
+                        <h3 class="card-title">{{TotalC}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons text-danger">help</i>
+                            <a routerLink="../listacliente">Lista</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Fin del card de clientes registrados -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">article</i>
+                        </div>
+                        <p class="card-category">Más adeudos</p>
+                        <h3 class="card-title">{{Conteo.conteo}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <a routerLink="../verinfocliente/{{Conteo._id}}"><i
+                                    class="material-icons">person</i>Cliente: {{Conteo.cliente}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6"><!-- Card de adeudo total -->
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">info_outline</i>
+                        </div>
+                        <p class="card-category">Adeudos totales</p>
+                        <h3 class="card-title">{{TotalA}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">save</i>Registrados
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Fin del card de adeudo total -->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <p class="card-category">Adeudo más alto</p>
+                        <h3 class="card-title">${{FAlta.adeudo}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <a routerLink="../verinfocliente/{{FAlta._id}}"><i class="material-icons">person</i>
+                                Cliente: {{FAlta.cliente}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Fin del row de las cuatro cards -->
+        <div class="row"><!-- Row de las gráficas -->
+            <div class="col-md-6"><!-- Adeudos por mes -->
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        <div class="ct-chart" id="websiteViewsChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Adeudos Por Mes</h4>
+                        <p class="card-category">Total de adeudos registrados por mes</p>
+                    </div>
+                </div>
+            </div><!-- Fin adeudos por mes -->
+            <div class="col-md-6"><!-- Adeudo acumulado por mes -->
+                <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                        <div class="ct-chart" id="dailySalesChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Adeudo Por Mes</h4>
+                        <p class="card-category">
+                            <span class="text-success"></span> Adeudo total por mes.</p>
+                    </div>
+                </div>
+            </div><!-- Fin de gráfica adeudo acumulado por mes -->
+        </div><!-- Fin del row de las gráficas -->
+    </div>
+</div>

@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { VerinfoclienteComponent } from 'app/verinfocliente/verinfocliente.component';
 import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.component';
 import { RegistrarBancoComponent } from 'app/registrar-banco/registrar-banco.component';
+import { InicioComponent } from 'app/inicio/inicio.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import { RegistrarBancoComponent } from 'app/registrar-banco/registrar-banco.com
     EditarclienteComponent,
     VerinfoclienteComponent,
     RegistrarAdeudoComponent,
-    RegistrarBancoComponent
+    RegistrarBancoComponent,
+    InicioComponent
   ]
 })
 

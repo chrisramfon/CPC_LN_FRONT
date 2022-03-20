@@ -24,6 +24,10 @@ import { VerinfoclienteComponent } from 'app/verinfocliente/verinfocliente.compo
 import { RegistrarAdeudoComponent } from 'app/registrar-adeudo/registrar-adeudo.component';
 import { RegistrarBancoComponent } from 'app/registrar-banco/registrar-banco.component';
 import { InicioComponent } from 'app/inicio/inicio.component';
+import { ListaEmpleadoComponent } from 'app/lista-empleado/lista-empleado.component';
+import { ModificarEmpleadoComponent } from 'app/modificar-empleado/modificar-empleado.component';
+import { VerEmpleadoComponent } from 'app/ver-empleado/ver-empleado.component';
+import { RegistrarEmpleadoComponent } from 'app/registrar-empleado/registrar-empleado.component';
 
 @NgModule({
   imports: [
@@ -53,7 +57,11 @@ import { InicioComponent } from 'app/inicio/inicio.component';
     VerinfoclienteComponent,
     RegistrarAdeudoComponent,
     RegistrarBancoComponent,
-    InicioComponent
+    InicioComponent,
+    ListaEmpleadoComponent,
+    ModificarEmpleadoComponent,
+    VerEmpleadoComponent,
+    RegistrarEmpleadoComponent
   ]
 })
 

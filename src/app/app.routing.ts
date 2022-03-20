@@ -15,20 +15,29 @@ import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.compone
 import { RegistrarAdeudoComponent } from './registrar-adeudo/registrar-adeudo.component';
 import { RegistrarBancoComponent } from './registrar-banco/registrar-banco.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ListaEmpleadoComponent } from './lista-empleado/lista-empleado.component';
+import { ModificarEmpleadoComponent } from './modificar-empleado/modificar-empleado.component';
+import { VerEmpleadoComponent } from './ver-empleado/ver-empleado.component';
+import { RegistrarEmpleadoComponent } from './registrar-empleado/registrar-empleado.component';
 
 const routes: Routes = [
   {path: 'inicio', component: IniciosesionComponent}, 
   {path: 'admin', component: AdminLayoutComponent,
   children: 
     [
-      { path:'', pathMatch:'full', redirectTo:'inicio'},
+      {path:'', pathMatch:'full', redirectTo:'inicio'},
       {path:'agregarcliente', component: AgregarclienteComponent},
       {path:'listacliente', component: ListaclienteComponent},
       {path:'editarcliente/:id', component: EditarclienteComponent},
       {path:'verinfocliente/:id', component: VerinfoclienteComponent},
       {path:'registraradeudo/:id', component: RegistrarAdeudoComponent},
       {path: 'RegistrarBanco/:id', component: RegistrarBancoComponent},
-      {path: 'inicio', component: InicioComponent}
+      {path: 'inicio', component: InicioComponent},
+      {path:'editarcliente', component: EditarclienteComponent},
+      {path: 'ListaEmpleado', component: ListaEmpleadoComponent},
+      {path: 'ModificarEmpleado/:id', component: ModificarEmpleadoComponent},
+      {path: 'VerEmpleado/:id', component: VerEmpleadoComponent},
+      {path: 'RegistrarEmpleado', component: RegistrarEmpleadoComponent} 
     ]
   },
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},

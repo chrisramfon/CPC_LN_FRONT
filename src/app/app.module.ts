@@ -27,11 +27,13 @@ import {
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
 import { LoginService } from './services/login.service';
+import { EmpleadoService } from './services/empleado.service';
 import { AgregarclienteComponent } from './agregarcliente/agregarcliente.component';
 import { ListaclienteComponent } from './listacliente/listacliente.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { ClienteService } from './services/cliente.service';
 import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.component';
+
 
 @NgModule({
   imports: [
@@ -54,7 +56,8 @@ import { VerinfoclienteComponent } from './verinfocliente/verinfocliente.compone
   ],
   providers: [
     LoginService,
-    ClienteService
+    ClienteService,
+    EmpleadoService
 
   ],
   bootstrap: [AppComponent]

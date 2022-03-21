@@ -33,4 +33,8 @@ private postcuentaURL = "http://127.0.0.1:3000/cliente/banco"
     return this.http.post<any>(this.postcuentaURL, Cuenta)
   }
 
+  postCliente(Cliente){
+    return this.http.post<any>(this.consultaCLIENTEURL, Cliente)
+  }
+
 }

@@ -28,7 +28,7 @@ Cuenta = {cuenta: "", banco: "", _id: ""}
     this.Cliente.postCuenta(this.Cuenta).subscribe(
       res=>{
         console.log(res)
-        alert("Cuenta registrada.")
+        alert(res.Mensaje)
         this.limpiar()
       }, 
       err =>{

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from 'app/services/empleado.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-empleado',
@@ -8,7 +9,7 @@ import { EmpleadoService } from 'app/services/empleado.service';
 })
 export class RegistrarEmpleadoComponent implements OnInit {
 
-  constructor(private Empleado: EmpleadoService) { }
+  constructor(private Empleado: EmpleadoService, private router:Router) { }
 
   ESend = { nombre: "", apellidoP: "", apellidoM: "", telefono: "", correo: "", pass: "", estado: "activo" }
 
@@ -35,6 +36,10 @@ export class RegistrarEmpleadoComponent implements OnInit {
   limpiarEmpleado() {
     this.ESend = { nombre: "", apellidoP: "", apellidoM: "", telefono: "", correo: "", pass: "", estado: "activo" }
   }
+  volveralalistaempleados(){
+    this.router.navigate(['/admin/ListaEmpleado'])
+  }
+
 
 }
 

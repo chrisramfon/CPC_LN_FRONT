@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { EmpleadoService } from 'app/services/empleado.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { EmpleadoService } from 'app/services/empleado.service';
 })
 export class VerEmpleadoComponent implements OnInit {
 
-  constructor(private Aroute: ActivatedRoute, private Empleado: EmpleadoService) { }
+  constructor(private Aroute: ActivatedRoute, private Empleado: EmpleadoService, private router:Router) { }
 
   ERes = { _id: "", nombre: "", apellidoP: "", apellidoM: "", telefono: "", correo: "", pass: "", estado: "", __v: ""}
 
@@ -25,6 +25,9 @@ export class VerEmpleadoComponent implements OnInit {
       console.log(err)
       alert("Empleado no encontrado.")
     })
+  }
+  volveralalistaempleados(){
+    this.router.navigate(['/admin/ListaEmpleado'])
   }
 
 }

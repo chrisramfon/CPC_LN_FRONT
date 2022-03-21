@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmpleadoService } from 'app/services/empleado.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class ModificarEmpleadoComponent implements OnInit {
   ESend = { _id: "", nombre: "", apellidoP: "", apellidoM: "", telefono: "", correo: "", pass: "", estado: "", __v: ""}
   ERes
 
-  constructor(private Aroute: ActivatedRoute, private Empleado: EmpleadoService) { }
+  constructor(private Aroute: ActivatedRoute, private Empleado: EmpleadoService, private router:Router) { }
 
   ngOnInit(): void {
     this.getEmpleado()
@@ -43,6 +43,10 @@ export class ModificarEmpleadoComponent implements OnInit {
         alert("El empleado no se pudo modificar.")
       })
 
+  }
+
+  volveralalistaempleados(){
+    this.router.navigate(['/admin/ListaEmpleado'])
   }
 
 }
